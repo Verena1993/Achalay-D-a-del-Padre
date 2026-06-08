@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Los 5 mejores regalos artesanales para el Día del Padre en Achalay. Diseños únicos con identidad argentina para compartir momentos inolvidables en familia.">
+    <title>Achalay - Especial Día del Padre | Regalos con Tradición Argentina</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/Logo Achalay.jpg" alt="Achalay Logo" class="nav-logo-img">
+                Achalay<span>.</span>
+            </a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Los 5 Regalos</a></li>
+                <li><a href="#momentos">Momentos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =========================================================================
+       HERO PRINCIPAL
+       ========================================================================= -->
+    <header class="hero" id="inicio">
+        <div class="hero-bg-media">
+            <!-- Background Image: Almohadón Matero Foto representing family cheering -->
+            <img src="assets/almohadon_matero_foto.png" alt="Familia alentando a la Selección Argentina - Achalay" class="ken-burns-active">
+        </div>
+        <!-- Soft dark overlay for text readability -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <!-- Brand Logo in Hero -->
+            <div class="hero-brand-logo-container" data-reveal>
+                <img src="assets/Logo Achalay.jpg" alt="Achalay Logo" class="hero-logo-img">
+                <div class="hero-brand-logo">ACHALAY</div>
+            </div>
+            <h1 data-reveal>Los mejores regalos para papá están en Achalay</h1>
+            <p class="hero-subtitle" data-reveal>Diseño artesanal argentino para compartir momentos inolvidables.</p>
+            
+            <div class="hero-ctas" data-reveal>
+                <a href="#productos" class="btn btn-accent btn-large">
+                    Ver regalos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+       SECCIÓN PRINCIPAL: LOS 5 MEJORES REGALOS PARA PAPÁ 🎁
+       ========================================================================= -->
+    <section class="campaign-section bg-wood-texture" id="productos">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="logo-divider">ACHALAY</div>
+                <h2>Los 5 mejores regalos para papá 🎁</h2>
+                <p>Regalos artesanales argentinos que combinan tradición, diseño y momentos inolvidables para compartir en familia.</p>
+            </div>
+
+            <!-- Products will be dynamically injected here by index.js -->
+            <div class="campaign-products-container" id="campaign-products-container">
+                <!-- Alterating split layout cards rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       SECCIÓN EMOCIONAL: REGALOS QUE SE CONVIERTEN EN RECUERDOS
+       ========================================================================= -->
+    <section class="emotional-collage-section" id="momentos">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="logo-divider">ACHALAY</div>
+                <h2>Regalos que se convierten en recuerdos</h2>
+                <p class="collage-description-text">Más que objetos, cada producto de Achalay está pensado para compartir momentos que quedan para siempre: un mate durante un partido, una picada con amigos o un asado en familia.</p>
+            </div>
+
+            <!-- Premium Collage of the 5 Foto images -->
+            <div class="collage-grid" data-reveal>
+                <div class="collage-item item-large">
+                    <img src="assets/almohadon_matero_foto.png" alt="Almohadón Matero en uso familiar" loading="lazy">
+                    <div class="collage-item-overlay">Compartir Mates en Familia</div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/set_matero_foto.png" alt="Set Matero en viaje" loading="lazy">
+                    <div class="collage-item-overlay">Compañero de Rutas</div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/set_asado_foto.png" alt="Cuchillo y tenedor de asado" loading="lazy">
+                    <div class="collage-item-overlay">El Ritual del Asado</div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/tabla_foto.png" alt="Tabla con picada" loading="lazy">
+                    <div class="collage-item-overlay">Picadas del Domingo</div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/planchas_hierro_foto.png" alt="Planchas de hierro en uso" loading="lazy">
+                    <div class="collage-item-overlay">Hamburguesas Gourmet</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       BLOQUE FINAL DE CONVERSIÓN
+       ========================================================================= -->
+    <section class="cta-final bg-leather-texture" id="contacto">
+        <div class="container" data-reveal>
+            <div class="logo-divider gold">ACHALAY</div>
+            <h2>Encontrá el regalo perfecto para papá</h2>
+            <p class="cta-subtitle">Elegí entre nuestras propuestas más vendidas y sorprendelo con un regalo único, artesanal y pensado para crear momentos inolvidables.</p>
+            
+            <button class="btn btn-whatsapp btn-large btn-final" data-wa-msg="Hola Achalay! Quisiera consultar por las propuestas de regalos artesanales disponibles para el Día del Padre.">
+                🚀 Consultar por más regalos
+            </button>
+            
+            <p class="cta-notice-text">Tenemos muchos más regalos artesanales disponibles. Consultanos y te ayudamos a encontrar el indicado.</p>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       FOOTER PREMIUM
+       ========================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">Achalay<span>.</span></a>
+                    <p class="footer-tagline">Tradiciones que se comparten.</p>
+                    <p class="footer-tagline">Regalos que perduran.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ubicación</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Rafaela, Santa Fe, Argentina
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <div class="footer-socials">
+                        <!-- WhatsApp button -->
+                        <button class="social-icon-btn" aria-label="Escribinos por WhatsApp" data-wa-msg="Hola Achalay! Me contacto desde la landing por consultas sobre regalos del Día del Padre.">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.994 9.994 0 0 0 4.779 1.21h.005c5.505 0 9.988-4.479 9.989-9.985A9.998 9.998 0 0 0 12.012 2zm5.748 13.917c-.244.688-1.22 1.259-1.684 1.309-.452.05-.889.261-2.915-.544-2.438-.967-3.992-3.444-4.113-3.606-.122-.162-.993-1.32-.993-2.518s.629-1.788.853-2.032c.224-.244.488-.305.65-.305s.325.002.467.008c.147.006.345-.056.541.424.203.497.694 1.694.755 1.816.061.122.102.264.02.427-.081.162-.122.264-.244.406-.122.142-.256.317-.366.427-.122.122-.25.254-.108.497.142.244.63 1.036 1.35 1.674.928.824 1.711 1.077 1.955 1.199.244.122.386.102.467.008.081-.094.345-.406.467-.609.122-.203.244-.162.406-.102.162.061 1.036.488 1.22.579.183.091.305.142.345.224.041.081.041.467-.203 1.155z" fill="currentColor"/></svg>
+                        </button>
+                        
+                        <!-- Instagram button -->
+                        <a href="https://www.instagram.com/achalay.rafaela/" target="_blank" class="social-icon-btn" aria-label="Seguinos en Instagram">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Achalay Rafaela. Tradición que se regala. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Logic -->
+    <script src="index.js"></script>
+</body>
+</html>
