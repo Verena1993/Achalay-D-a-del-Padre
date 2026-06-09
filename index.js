@@ -8,10 +8,10 @@ const CAMPAIGN_PRODUCTS = [
         id: 'almohadon-matero',
         highlight: '🇦🇷 El regalo perfecto para alentar a la Selección',
         name: 'Almohadón Matero Selección Argentina',
-        description: 'Ideal para compartir mates durante cada partido. Diseñado con los colores argentinos y espacio para termo y mate, combina comodidad, identidad y pasión futbolera.',
+        description: 'Ideal para compartir mates durante cada partido. Diseñado con los colores argentinos y espacio para termo y mate, combina comodidad, identidad and pasión futbolera.',
         price: 24000,
-        portada: 'assets/almohadon_matero_portada.png',
-        foto: 'assets/almohadon_matero_foto.png',
+        portada: 'assets/Almohadón Matero Portada.png',
+        foto: 'assets/Almohadón Matero Foto.png',
         waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar el 'Almohadón Matero Selección Argentina' ($24.000) para regalar a papá."
     },
     {
@@ -20,8 +20,8 @@ const CAMPAIGN_PRODUCTS = [
         name: 'Set Matero Premium Selección Argentina',
         description: 'Matera acolchada, termo, mate, bombilla y yerbera en un conjunto elegante y funcional. El compañero ideal para cada mañana, viaje o encuentro familiar.',
         price: 65000,
-        portada: 'assets/set_matero_portada.png',
-        foto: 'assets/set_matero_foto.png',
+        portada: 'assets/Set Matero Portada.png',
+        foto: 'assets/Set Matero Foto.png',
         waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar el 'Set Matero Premium Selección Argentina' ($65.000) para regalar a papá."
     },
     {
@@ -30,8 +30,8 @@ const CAMPAIGN_PRODUCTS = [
         name: 'Set Parrillero Premium',
         description: 'Diseñado para quienes disfrutan del ritual del asado argentino. Incluye cuchillo, tenedor y accesorios presentados en un exclusivo estuche artesanal.',
         price: 35000,
-        portada: 'assets/set_asado_portada.png',
-        foto: 'assets/set_asado_foto.png',
+        portada: 'assets/Set de Asado Portada.png',
+        foto: 'assets/Set de Asado Foto.png',
         waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar el 'Set Parrillero Premium' ($35.000) para regalar a papá."
     },
     {
@@ -40,8 +40,8 @@ const CAMPAIGN_PRODUCTS = [
         name: 'Tabla Argentina con 3 Estrellas',
         description: 'Una pieza única inspirada en las tres Copas del Mundo. Perfecta para picadas, reuniones y momentos especiales entre amigos y familia.',
         price: 35000,
-        portada: 'assets/tabla_portada.png',
-        foto: 'assets/tabla_foto.png',
+        portada: 'assets/Tabla Portada.png',
+        foto: 'assets/Tabla Foto.png',
         waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar la 'Tabla Argentina con 3 Estrellas' ($35.000) para regalar a papá."
     },
     {
@@ -50,8 +50,8 @@ const CAMPAIGN_PRODUCTS = [
         name: 'Tabla con Mini Planchas de Hierro',
         description: 'Ideal para hamburguesas, carnes y presentaciones gourmet. Una propuesta original para sorprender a cualquier amante de la cocina y el asado.',
         price: 39000,
-        portada: 'assets/planchas_hierro_portada.png',
-        foto: 'assets/planchas_hierro_foto.png',
+        portada: 'assets/Planchas de Hierro Portada.png',
+        foto: 'assets/Planchas de Hierro Foto.png',
         waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar la 'Tabla con Mini Planchas de Hierro' ($39.000) para regalar a papá."
     }
 ];
