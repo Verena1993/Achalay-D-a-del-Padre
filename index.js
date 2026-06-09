@@ -8,51 +8,71 @@ const CAMPAIGN_PRODUCTS = [
         id: 'almohadon-matero',
         highlight: '🇦🇷 El regalo perfecto para alentar a la Selección',
         name: 'Almohadón Matero Selección Argentina',
-        description: 'Ideal para compartir mates durante cada partido. Diseñado con los colores argentinos y espacio para termo y mate, combina comodidad, identidad and pasión futbolera.',
+        description: 'Ideal para compartir mates durante cada partido. Diseñado con los colores de la bandera argentina y espacio dedicado para termo y mate, combina comodidad, identidad y pasión futbolera.',
+        benefits: [
+            'Confeccionado en cordura impermeable de alta resistencia',
+            'Espacio rígido optimizado para termo, mate y bombilla',
+            'Correa regulable reforzada para llevar al hombro cómodamente'
+        ],
         price: 24000,
         portada: 'assets/Almohadón Matero Portada.png',
-        foto: 'assets/Almohadón Matero Foto.png',
-        waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar el 'Almohadón Matero Selección Argentina' ($24.000) para regalar a papá."
+        waMsg: "Hola Achalay! Quisiera comprar el 'Almohadón Matero Selección Argentina' ($24.000) para el Día del Padre."
     },
     {
         id: 'set-matero',
         highlight: '🧉 Para el papá matero de todos los días',
         name: 'Set Matero Premium Selección Argentina',
         description: 'Matera acolchada, termo, mate, bombilla y yerbera en un conjunto elegante y funcional. El compañero ideal para cada mañana, viaje o encuentro familiar.',
+        benefits: [
+            'Matera bolso acolchada semi-rígida de cuero ecológico',
+            'Termo de acero inoxidable de 1 litro con forro combinado',
+            'Yerbera, azucarera y mate de alta calidad a juego'
+        ],
         price: 65000,
         portada: 'assets/Set Matero Portada.png',
-        foto: 'assets/Set Matero Foto.png',
-        waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar el 'Set Matero Premium Selección Argentina' ($65.000) para regalar a papá."
+        waMsg: "Hola Achalay! Quisiera comprar el 'Set Matero Premium Selección Argentina' ($65.000) para el Día del Padre."
     },
     {
         id: 'set-asado',
         highlight: '🥩 El aliado infaltable del asador',
         name: 'Set Parrillero Premium',
         description: 'Diseñado para quienes disfrutan del ritual del asado argentino. Incluye cuchillo, tenedor y accesorios presentados en un exclusivo estuche artesanal.',
+        benefits: [
+            'Cuchillo y tenedor de acero forjado con mango de madera noble',
+            'Estuche de cuero legítimo con costuras artesanales de alta durabilidad',
+            'Accesorios ideales para asados de campo y familiares'
+        ],
         price: 35000,
         portada: 'assets/Set de Asado Portada.png',
-        foto: 'assets/Set de Asado Foto.png',
-        waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar el 'Set Parrillero Premium' ($35.000) para regalar a papá."
+        waMsg: "Hola Achalay! Quisiera comprar el 'Set Parrillero Premium' ($35.000) para el Día del Padre."
     },
     {
         id: 'tabla-estrellas',
         highlight: '⭐ La tabla campeona del mundo',
         name: 'Tabla Argentina con 3 Estrellas',
-        description: 'Una pieza única inspirada en las tres Copas del Mundo. Perfecta para picadas, reuniones y momentos especiales entre amigos y familia.',
+        description: 'Una pieza única inspirada en las tres Copas del Mundo de la Selección. Perfecta para picadas, reuniones y momentos especiales entre amigos y familia.',
+        benefits: [
+            'Madera maciza de algarrobo pulida y curada',
+            'Grabado de relieve de las 3 estrellas de la Selección',
+            'Canaleta perimetral profunda para jugos y picadas'
+        ],
         price: 35000,
         portada: 'assets/Tabla Portada.png',
-        foto: 'assets/Tabla Foto.png',
-        waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar la 'Tabla Argentina con 3 Estrellas' ($35.000) para regalar a papá."
+        waMsg: "Hola Achalay! Quisiera comprar la 'Tabla Argentina con 3 Estrellas' ($35.000) para el Día del Padre."
     },
     {
         id: 'planchas-hierro',
         highlight: '🍔 Hamburguesas gourmet como un profesional',
         name: 'Tabla con Mini Planchas de Hierro',
         description: 'Ideal para hamburguesas, carnes y presentaciones gourmet. Una propuesta original para sorprender a cualquier amante de la cocina y el asado.',
+        benefits: [
+            'Mini planchas de hierro fundido de gran retención de calor',
+            'Base protectora de madera dura tallada para llevar a la mesa',
+            'Apto para hornallas, asadores y hornos directos'
+        ],
         price: 39000,
         portada: 'assets/Planchas de Hierro Portada.png',
-        foto: 'assets/Planchas de Hierro Foto.png',
-        waMsg: "Hola Achalay! Quisiera consultar disponibilidad y encargar la 'Tabla con Mini Planchas de Hierro' ($39.000) para regalar a papá."
+        waMsg: "Hola Achalay! Quisiera comprar la 'Tabla con Mini Planchas de Hierro' ($39.000) para el Día del Padre."
     }
 ];
 
@@ -94,7 +114,7 @@ function setupWhatsAppLinks() {
 }
 
 // =========================================================================
-// RENDER CAMPAIGN PRODUCTS (Alternating Split Layout)
+// RENDER CAMPAIGN PRODUCTS (Centered Stack Layout)
 // =========================================================================
 function renderCampaignProducts() {
     const container = document.getElementById('campaign-products-container');
@@ -102,10 +122,7 @@ function renderCampaignProducts() {
 
     container.innerHTML = '';
 
-    CAMPAIGN_PRODUCTS.forEach((product, index) => {
-        const isOdd = index % 2 !== 0;
-        const rowClass = isOdd ? 'product-wrapper reverse' : 'product-wrapper';
-        
+    CAMPAIGN_PRODUCTS.forEach((product) => {
         let highlightClass = 'product-highlight';
         if (product.highlight.includes('🇦🇷') || product.highlight.includes('Selección') || product.name.includes('Selección')) {
             highlightClass += ' highlight-patria';
@@ -113,39 +130,43 @@ function renderCampaignProducts() {
             highlightClass += ' highlight-stars';
         }
         
+        // Build benefits list
+        const benefitsHtml = product.benefits.map(benefit => `
+            <li>
+                <svg class="benefit-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>${benefit}</span>
+            </li>
+        `).join('');
+
         const blockHtml = `
-            <div class="${rowClass}" data-reveal id="${product.id}">
-                <!-- Main Product Layout (Split Row) -->
-                <div class="product-main-row">
-                    <div class="product-info-col">
-                        <span class="${highlightClass}">${product.highlight}</span>
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-price">${formatCurrency(product.price)}</div>
-                        
-                        <div class="product-actions">
-                            <button class="btn btn-whatsapp" data-wa-msg="${product.waMsg}">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.994 9.994 0 0 0 4.779 1.21h.005c5.505 0 9.988-4.479 9.989-9.985A9.998 9.998 0 0 0 12.012 2zm5.748 13.917c-.244.688-1.22 1.259-1.684 1.309-.452.05-.889.261-2.915-.544-2.438-.967-3.992-3.444-4.113-3.606-.122-.162-.993-1.32-.993-2.518s.629-1.788.853-2.032c.224-.244.488-.305.65-.305s.325.002.467.008c.147.006.345-.056.541.424.203.497.694 1.694.755 1.816.061.122.102.264.02.427-.081.162-.122.264-.244.406-.122.142-.256.317-.366.427-.122.122-.25.254-.108.497.142.244.63 1.036 1.35 1.674.928.824 1.711 1.077 1.955 1.199.244.122.386.102.467.008.081-.094.345-.406.467-.609.122-.203.244-.162.406-.102.162.061 1.036.488 1.22.579.183.091.305.142.345.224.041.081.041.467-.203 1.155z" fill="currentColor"/></svg>
-                                Consultar por WhatsApp
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="product-image-col">
-                        <img src="${product.portada}" alt="${product.name}" class="product-image" loading="lazy">
-                    </div>
+            <div class="product-card" data-reveal id="${product.id}">
+                <!-- Product Image (Aspect-Ratio Consistent) -->
+                <div class="product-image-container">
+                    <img src="${product.portada}" alt="${product.name}" class="product-image" loading="lazy">
                 </div>
                 
-                <!-- Emotional Sub-block -->
-                <div class="product-emotional-block">
-                    <div class="emotional-header">
-                        <span class="emotional-line"></span>
-                        <h4 class="emotional-title">Así se vive</h4>
-                        <span class="emotional-line"></span>
+                <!-- Product Info (Centered Design) -->
+                <div class="product-content">
+                    <span class="${highlightClass}">${product.highlight}</span>
+                    <h3 class="product-name">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+                    
+                    <!-- Product-Specific Benefits List -->
+                    <ul class="product-specific-benefits">
+                        ${benefitsHtml}
+                    </ul>
+                    
+                    <div class="product-price-row">
+                        <span class="price-label">Precio Especial:</span>
+                        <span class="product-price">${formatCurrency(product.price)}</span>
                     </div>
-                    <div class="emotional-image-wrapper">
-                        <img src="${product.foto}" alt="Así se vive - ${product.name}" class="emotional-image" loading="lazy">
-                    </div>
+                    
+                    <button class="btn btn-whatsapp btn-large" data-wa-msg="${product.waMsg}">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.994 9.994 0 0 0 4.779 1.21h.005c5.505 0 9.988-4.479 9.989-9.985A9.998 9.998 0 0 0 12.012 2zm5.748 13.917c-.244.688-1.22 1.259-1.684 1.309-.452.05-.889.261-2.915-.544-2.438-.967-3.992-3.444-4.113-3.606-.122-.162-.993-1.32-.993-2.518s.629-1.788.853-2.032c.224-.244.488-.305.65-.305s.325.002.467.008c.147.006.345-.056.541.424.203.497.694 1.694.755 1.816.061.122.102.264.02.427-.081.162-.122.264-.244.406-.122.142-.256.317-.366.427-.122.122-.25.254-.108.497.142.244.63 1.036 1.35 1.674.928.824 1.711 1.077 1.955 1.199.244.122.386.102.467.008.081-.094.345-.406.467-.609.122-.203.244-.162.406-.102.162.061 1.036.488 1.22.579.183.091.305.142.345.224.041.081.041.467-.203 1.155z" fill="currentColor"/></svg>
+                        Comprar por WhatsApp
+                    </button>
                 </div>
             </div>
         `;
